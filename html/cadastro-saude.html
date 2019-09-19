@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/visitas.css">
+    <script src="../js/sidebar.js"></script>
+    <title>Cadastro Saúde</title>
+    <style>
+        body{
+            color: #878787;
+        }
+        input::placeholder{
+            color: #B8B8B8
+        }
+        input{
+            background-color: #E6E6E6;
+        }
+        .btn-visitas{
+            background-color: #00BCD4;
+            border:none;
+            color:#ffffff;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- side bar -->
+    <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <img src="../icon/arrow_back.svg" class="icon" alt="">
+            </a>
+            <a href="mapa.html">Mapa</a>
+            <a href="cadastro-moradia.html"">Visita</a>
+            <a href="notificacoes.html">Notificações</a>
+            <a href="painel.html">Painel</a>
+    </div>
+    <nav class="navbar">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">
+        <img class="icon" src="../icon/reorder.svg" alt="">
+        <span class="title">Cadastro Saúde</span>
+        </span>
+    </nav>
+    <div class="container">
+        <img src="../img/etapa3.png" alt="" class="etapa">
+        <form action="cadastro-rua.html" method="POST">
+            <div class="form-group">
+
+                <input type="number" class="form-control"  placeholder="Nº SUS" >
+                <input type="text" class="form-control"  placeholder="Doença cardíaca" >
+                <input type="number" class="form-control"  placeholder="Peso" >
+                <input type="text" class="form-control"  placeholder="Doença respiratória" >
+                <input type="text" class="form-control"  placeholder="Problema nos rins" >
+                
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check-input-fumante">
+                        <label class="form-check-label" for="check-input-fumante">
+                            Fumante
+                        </label>
+                    </div>
+                    <div class="col form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check-input-mudanca-etapa3">
+                        <label class="form-check-label" for="check-input-mudanca-etapa3">
+                            Mudança
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check-input-alcool">
+                            <label class="form-check-label" for="check-input-alcool">
+                                Usa álcool
+                            </label>
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check-input-diabetes">
+                            <label class="form-check-label" for="check-input-diabetes">
+                                Diabetes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check-input-drogas">
+                        <label class="form-check-label" for="check-input-drogas">
+                            Drogas
+                        </label>
+                    </div>
+                    <div class="col form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check-input-avc">
+                        <label class="form-check-label" for="check-input-avc">
+                            AVC/Derrame
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check-input-hipertenso">
+                        <label class="form-check-label" for="check-input-hipertenso">
+                            Hipertenso
+                        </label>
+                    </div>
+                    <div class="col form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check-input-cancer">
+                        <label class="form-check-label" for="check-input-cancer">
+                            Câncer
+                        </label>
+                    </div>
+                </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a href="cadastro-individual.html">
+                            <input type="button" value="Anterior" class="form-control btn btn-visitas">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="cadastro-rua.html">
+                            <input type="submit" value="Proximo" class="form-control btn btn-visitas">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

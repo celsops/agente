@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+
+    <script src="../js/sidebar.js"></script>
+    <script type="text/javascript" src="../js/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', '', ''],
+          ['Janeiro', 100, 40],
+          ['Fervereiro', 11, 46],
+          ['Março', 66, 11],
+          ['Abril', 10, 54]
+        ]);
+
+        var options = {
+          bars: 'vertical' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+      function ativar(elemento) {
+        document.getElementById("saude").style="";
+        document.getElementById("vigilancia-sanitaria").style="";
+        elemento.style = "border-bottom:2px seagreen solid";
+    }
+    </script>
+
+    <title>Painel</title>
+</head>
+<body>
+    <!-- side bar -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <img src="../icon/arrow_back.svg" class="icon" alt="">
+        </a>
+        <a href="mapa.html">Mapa</a>
+        <a href="cadastro-moradia.html"">Visita</a>
+        <a href="notificacoes.html">Notificações</a>
+        <a href="painel.html">Painel</a>
+    </div>
+    <nav class="navbar">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <img class="icon" src="../icon/reorder.svg" alt="">
+            <span class="title">Painel</span>
+        </span>
+    </nav>
+
+
+    <div class="container">
+        <div class="container">
+            <ul class="row list-inline">
+                <li class="col" id="saude" onclick="ativar(this)" style="border-bottom:2px seagreen solid;">Saúde</li>
+                <li class="col" id="vigilancia-sanitaria" onclick="ativar(this)">Vigilância sanitária</li>
+            </ul>
+        </div>
+        <script>
+            function ativar(elemento) {
+                document.getElementById("saude").style="";
+                document.getElementById("vigilancia-sanitaria").style="";
+                elemento.style = "border-bottom:2px seagreen solid";
+            }
+        </script>
+        <span>Ocorrências</span>
+        <div id="barchart_material" style="width: 100%; height: 150px;"></div>
+    </div>
+</body>
+</html>
