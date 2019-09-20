@@ -39,3 +39,16 @@ select.classic {
         2.5em 2.5em;
     background-repeat: no-repeat;
 }
+
+
+
+.text-area-descricao{
+    width: 100%;
+    border:none;
+    background-color: #E6E6E6;
+    color:#B4B4B4;
+    resize: none;
+    padding: 1%;
+    color: black;
+    border-radius: 0px;
+}
