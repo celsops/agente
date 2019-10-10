@@ -54,11 +54,65 @@
         <form action="cadastro-saude.html" method="POST">
             <div class="form-group">
                 <input type="number" class="form-control"  placeholder="Nº SUS" >
-                <input type="text" class="form-control"  placeholder="Parentesco" >
-                <input type="text" class="form-control"  placeholder="Escolaridade" >
-                <input type="text" class="form-control"  placeholder="Gênero" >
-                <input type="text" class="form-control"  placeholder="Deficiência" >
-                <input type="text" class="form-control"  placeholder="Criança com..." >
+                <select class="classic">
+                    <option value="" disabled selected>Parentesco com o responsável familiar</option>
+                    <option value="">Cônjuge/Companheiro(a)</option>
+                    <option value="">Pai/Mãe</option>
+                    <option value="">Sogro(a)</option>
+                    <option value="">Filho(a)</option>
+                    <option value="">Enteado(a)</option>
+                    <option value="">Neto(a)/Bisneto(a)</option>
+                    <option value="">Irmão/Irmã</option>
+                    <option value="">Genro/Nora</option>
+                    <option value="">Outro parente</option>
+                    <option value="">Não parente</option>
+                </select>
+                
+                <select class="classic">
+                    <option value="" disabled selected>Escolaridade</option>
+                    <option value="">Creche</option>
+                    <option value="">Ensino Fundamental EJA - séries finais (Supletivo 5a a 8a)</option>
+                    <option value="">Pré-escola (exceto CA)</option>
+                    <option value="">Ensino Médio, Médio 2o Ciclo (Científico, Técnico etc.)</option>
+                    <option value="">Classe de Alfabetização - CA</option>
+                    <option value="">Ensino Médio Especial</option>
+                    <option value="">Ensino Fundamental 1a a 4a séries</option>
+                    <option value="">Ensino Médio EJA (Supletivo)</option>
+                    <option value="">Ensino Fundamental 5a a 8a séries</option>
+                    <option value="">Superior, Aperfeiçoamento, Especialização, Mestrado,Doutorado</option>
+                    <option value="">Ensino Fundamental Completo</option>
+                    <option value="">Ensino Fundamental Especial</option>
+                    <option value="">Ensino Fundamental EJA - séries iniciais(Supletivo 1a a 4a)</option>
+                    <option value="">Alfabetização para Adultos (Mobral etc.)</option>
+                    <option value="">Nenhum</option>
+                </select>
+<!--     
+
+ -->
+                <select class="classic">
+                    <option value="" disabled selected>Sexo</option>
+                    <option value="">Masculino</option>
+                    <option value="">Feminino</option>
+                </select>
+
+                <select class="classic">
+                    <option value="" disabled selected>Deficiência</option>
+                    <option value="">Visual</option>
+                    <option value="">Auditiva</option>
+                    <option value="">Intelectual/Cognitiva</option>
+                    <option value="">Fisica</option>
+                    <option value="">Outra</option>                    
+                </select>
+                
+                <select class="classic">
+                    <option value="" disabled selected>CRIANÇAS DE 0 A 9 ANOS, COM QUEM FICA?</option>
+                    <option value="">Creche</option>
+                    <option value="">Adulto Responsável</option>
+                    <option value="">Outra(s) Criança(s)</option>
+                    <option value="">Adolescente</option>
+                    <option value="">Sozinha</option>
+                    <option value="">Outro</option>
+                </select>
                 
                 <div class="container">
 
@@ -86,7 +140,7 @@
                         </label>
                     </div>
                 </div>
-            </div>
+                </div>
                 
                 <br>
                 <div class="row">

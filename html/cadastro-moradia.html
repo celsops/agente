@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/visitas.css">
 
     <script src="../js/sidebar.js"></script>
-    <title>Cadastro</title>
+    <title>Cadastro moradia</title>
 </head>
 <body>
     <!-- side bar -->
@@ -36,15 +36,41 @@
         <br>    
         <form action="cadastro-individual.html" method="POST">
             <div class="form-group">
-                <div class="container row">
+                <div class="container row" aria-details="Cep e número">
                     <input type="number" class="col form-control" style="padding-left: 10px"  placeholder="CEP"> 
                     <input type="number" class="col form-control"  style="margin-left: 10px;" placeholder="Número" >
                 </div>
                 <input type="text" class="form-control"  placeholder="Rua" >
-                <input type="text" class="form-control"  placeholder="Abatecimento de água" >
-                <input type="text" class="teste form-control"  placeholder="Animais" >
-                <input type="text" class="form-control"  placeholder="Esgoto" >
-                <input type="text" class="form-control"  placeholder="Lixo" >
+                <select class="classic" aria-details="Abastecimento de água" name="agua">
+                    <option value="" disabled selected>Abastecimento de água</option>
+                    <option value="">Rede Encanada até o Domicílio</option>
+                    <option value="">Carro Pipa</option>
+                    <option value="">Poço/Nascente no Domicílio</option>
+                    <option value="">Cisterna</option>
+                    <option value="">Outro</option>
+                </select>
+                <select class="classic" aria-details="Animais" name="animais">
+                    <option disabled selected>Tem animais?</option>
+                    <option id="animais" onclick="modal()" data-toggle="modal" data-target="#modalAnimais">Sim</option>
+                    <option value="">Não</option>
+                </select>
+                <select class="classic" aria-details="Esgoto" name="esgoto">
+                    <option value="" disabled selected>Forma de escotamento do banheiro ou sanitário</option>
+                    <option value="">Rede Coletora de Esgoto ou Pluvial</option>
+                    <option value="">Fossa Séptica</option>
+                    <option value="">Fossa Rudimentar</option>
+                    <option value="">Direto para um Rio, Lago ou Mar</option>
+                    <option value="">Céu Aberto</option>   
+                    <option value="">Outra Forma</option>                                     
+                </select>
+                <select class="classic" aria-details="Lixo" name="lixo">
+                    <option value="" disabled selected>Destino do lixo</option>
+                    <option value="">Coletado</option>
+                    <option value="">Queimado/Enterrado</option>
+                    <option value="">Céu Aberto</option>
+                    <option value="">Outro</option>
+                </select>
+
                 <input type="number" class="form-control"  placeholder="Nº SUS Responsável" >
                 <br>    
                 <input type="submit" value="Proximo" class="btn btn-proximo">
@@ -52,5 +78,6 @@
             </div>
         </form>
     </div>
+
 </body>
 </html>
